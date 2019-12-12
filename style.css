@@ -1,138 +1,159 @@
 body {
-	background: #F7F7F7;
+    background: #F7F7F7;
 }
+
 .wrap {
-	position: relative;
-	margin: 0 auto;
-	width: 15rem;
-	height: 20rem;
-	cursor: pointer;
+    position: relative;
+    margin: 0 auto;
+    width: 15rem;
+    height: 20rem;
+    cursor: pointer;
 }
+
 .wrap div {
-	width: 100%;
-	height: 100%;
-	border-radius: 1rem;
-	background-position: 50% 50%;
-	background-size: 100%;
-	background-repeat: no-repeat;
-	box-shadow: inset 0 0 45px rgba(255,255,255,.3), 0 12px 20px -10px rgba(0,0,0,.4);
-	color: #FFF;
-	text-align: center;
-	text-shadow: 0 1px rgba(0,0,0,.3);
-	font: bold 3em sans-serif;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    background-position: 50% 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 45px rgba(255, 255, 255, .3), 0 12px 20px -10px rgba(0, 0, 0, .4);
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0 1px rgba(0, 0, 0, .3);
+    font: bold 3em sans-serif;
 }
+
 .winner {
-	background-image: url("winner.jpg")
+    background-image: url("winner.jpg")
 }
-.side-b,.side-c {
-	background: #498FBC; 
-	background-image: url("gitcard.jpg")
+
+.side-b,
+.side-c {
+    background: #498FBC;
+    background-image: url("gitcard.jpg")
 }
-.side-a, .side-d {
-	background: white;
-	background-image: url("spadesgit.png")
+
+.side-a,
+.side-d {
+    background: white;
+    background-image: url("spadesgit.png")
 }
+
 body {
-	-webkit-perspective: 800px;
+    -webkit-perspective: 800px;
 }
 
 .wrap {
-	transition: -webkit-transform 1s ease-in;
-	-webkit-transform-style: preserve-3d;
+    transition: -webkit-transform 1s ease-in;
+    -webkit-transform-style: preserve-3d;
 }
 
 .wrap div {
-	position: absolute;
-	-webkit-backface-visibility: hidden;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
 }
 
-.side-a, .side-d,.winner {
-	z-index: 100;
+.side-a,
+.side-d,
+.winner {
+    z-index: 100;
 }
-.side-b,.side-c {
-	-webkit-transform: rotateY(-180deg);
+
+.side-b,
+.side-c {
+    -webkit-transform: rotateY(-180deg);
 }
 
 .wrap:hover {
-	-webkit-transform: rotateY(180deg);
-}
-img{
-	height: 10rem;
-	width: 8.7rem;;
-	position: relative;
-	padding-top: 4rem;
-	right: 0rem;
-}
-a{
-position: absolute;
-font-size: 1.4rem;
-left:0;
-bottom: 20%;
-width: 15rem;
-color:white;
-}
-p{
-	position: absolute;
-	font-size: 1rem;
-	left:0;
-	bottom: 9%;
-	color: lightgrey;
-	width: 15rem;
-	}
-h1{
-	position: absolute;
-	font-size: .5rem;
-	bottom: 0%;
-	color: lightgrey;
-	width: 15rem;
-	right: 0rem;
-	word-spacing: 30px;
-	}
-h2{
-	position: absolute;
-	font-size: 1.2rem;
-	bottom: 0%;
-	color: lightgrey;
-	width: 15.5rem;
-	right: 0rem;
-	word-spacing:2.7rem;
-	}
-.input, .input2 {
-	position: absolute;
-	/* background: transparent; */
-	border: none;
-	bottom: 50%;
-	width: 15rem;
-	right: 0%;
-	outline: none;
-	color: blue;
-	font-size: 2rem;
-	text-align: center;
+    -webkit-transform: rotateY(180deg);
 }
 
-.battle{
-	position: relative;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-  }
-  
-  .a{
-	cursor: pointer;
-	text-align: center;
-	position: relative;
-	font-size: 1rem;
-	font-family: sans-serif;
-	text-decoration: none;
-	color: #333;
-	border-top: 1px solid #333;
-	border-bottom: 1px solid #333;
-	padding: 5px;
-	letter-spacing: 1px;
-	transition: all .25s;
-  }
-  
-  .a:hover{
-	letter-spacing: .5rem;
-  }
+img {
+    height: 10rem;
+    width: 8.7rem;
+    ;
+    position: relative;
+    padding-top: 4rem;
+    right: 0rem;
+}
+
+a {
+    position: absolute;
+    font-size: 1.4rem;
+    left: 0;
+    bottom: 20%;
+    width: 15rem;
+    color: white;
+}
+
+p {
+    position: absolute;
+    font-size: 1rem;
+    left: 0;
+    bottom: 9%;
+    color: lightgrey;
+    width: 15rem;
+}
+
+h1 {
+    position: absolute;
+    font-size: .5rem;
+    bottom: 0%;
+    color: lightgrey;
+    width: 15rem;
+    right: 0rem;
+    word-spacing: 30px;
+}
+
+h2 {
+    position: absolute;
+    font-size: 1.2rem;
+    bottom: 0%;
+    color: lightgrey;
+    width: 15.5rem;
+    right: 0rem;
+    word-spacing: 2.7rem;
+}
+
+.input,
+.input2 {
+    position: absolute;
+    /* background: transparent; */
+    border: none;
+    bottom: 50%;
+    width: 15rem;
+    right: 0%;
+    outline: none;
+    color: blue;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.battle {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.a {
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    font-size: 1rem;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 5px;
+    letter-spacing: 1px;
+    transition: all .25s;
+    line-height: 2rem;
+}
+
+.a:hover {
+    letter-spacing: .5rem;
+}
