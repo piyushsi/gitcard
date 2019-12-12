@@ -25,7 +25,7 @@ input.addEventListener('keyup',(e) => {
             let h2 = document.createElement("h2")
             h2.textContent=`${obj.public_repos} ${obj.followers} ${obj.following}`
             cardA.append(img,name,location,h2,h1)
-            return points1=(obj.public_repos+obj.followers+obj.following)/2
+            return points1=(obj.public_repos+obj.followers)/2
     }
     req.send();
 }})
@@ -54,7 +54,7 @@ input2.addEventListener('keyup',(e) => {
             let h2 = document.createElement("h2")
             h2.textContent=`${obj.public_repos} ${obj.followers} ${obj.following}`
             cardB.append(img,name,location,h2,h1)
-            return points2=(obj.public_repos+obj.followers+obj.following)/2
+            return points2=(obj.public_repos+obj.followers)/2
     }
     req.send();
 }})
