@@ -7,7 +7,12 @@ input.addEventListener('keyup', (e) => {
         req.open('GET', `https://api.github.com/users/${e.target.value}`)
         req.onload = () => {
             obj = (JSON.parse(req.response))
-
+            if (obj.public_repos == undefined) {
+                let cardA = document.querySelector(".side-b")
+                let name = document.createElement("a")
+                name.textContent = "userid not found"
+                cardA.append(name)
+            } else {
             let cardA = document.querySelector(".side-b")
             cardA.innerHTML = ""
                 // cardA.innerHTML=`<img src="${obj.avatar_url}">
@@ -25,7 +30,7 @@ input.addEventListener('keyup', (e) => {
             h2.textContent = `${obj.public_repos} ${obj.followers} ${obj.following}`
             cardA.append(img, name, location, h2, h1)
             return points1 = (obj.public_repos + obj.followers) / 2
-        }
+        }}
         req.send();
     }
 })
@@ -38,6 +43,12 @@ input2.addEventListener('keyup', (e) => {
         req.open('GET', `https://api.github.com/users/${e.target.value}`)
         req.onload = () => {
             obj = (JSON.parse(req.response))
+            if (obj.public_repos == undefined) {
+                let cardB = document.querySelector(".side-c")
+                let name = document.createElement("a")
+                name.textContent = "userid not found"
+                cardB.append(name)
+            } else {
             let cardB = document.querySelector(".side-c")
             cardB.innerHTML = ""
                 // cardA.innerHTML=`<img src="${obj.avatar_url}">
@@ -55,7 +66,7 @@ input2.addEventListener('keyup', (e) => {
             h2.textContent = `${obj.public_repos} ${obj.followers} ${obj.following}`
             cardB.append(img, name, location, h2, h1)
             return points2 = (obj.public_repos + obj.followers) / 2
-        }
+        }}
         req.send();
     }
 })
