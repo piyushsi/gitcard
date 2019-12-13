@@ -11,6 +11,7 @@ input.addEventListener('keyup', (e) => {
                 let cardA = document.querySelector(".side-b")
                 let name = document.createElement("a")
                 name.textContent = "userid not found"
+                cardA.innerHTML = ""
                 cardA.append(name)
             } else {
             let cardA = document.querySelector(".side-b")
@@ -47,6 +48,7 @@ input2.addEventListener('keyup', (e) => {
                 let cardB = document.querySelector(".side-c")
                 let name = document.createElement("a")
                 name.textContent = "userid not found"
+                cardB.innerHTML = ""
                 cardB.append(name)
             } else {
             let cardB = document.querySelector(".side-c")
